@@ -1,0 +1,104 @@
+@import './../vars.styl'
+
+.b-modal {
+	position:absolute;
+	z-index:30;
+	top:0;
+	left:0;
+	width:100%;
+	height:0;
+	background:alpha($color-default,.9);
+	overflow:hidden;
+	-webkit-overflow-scrolling:touch;
+	
+	white-space:nowrap;
+	text-align:center;
+		
+	opacity:0;
+	overflow:hidden;
+	
+	transition:opacity .3s linear, height 0s .3s linear;
+	
+	&:before {
+		vamiddle();
+	}
+	
+	&._opened {
+		height:100%;
+		opacity:1;
+		
+		transition:opacity .3s linear, height 0s 0s linear;
+	}
+	
+	&._visible {
+		overflow:auto;
+	}
+	
+	&-wrap {
+		position:relative;
+		display:inline-block;
+		vertical-align:middle;
+		
+		width:96rem;
+		padding:2rem;
+		
+		white-space:normal;
+		text-align:left;
+	}
+		
+	&-con {
+		position:relative;
+		width:100%;
+	}
+	
+	&-close {
+		position:absolute;
+		top:0;
+		right:0;
+		width:1.4rem;
+		height:1.4rem;
+		padding:1.3rem;
+		border-radius:2rem;
+		background:$color-default;
+		color:$color-back;
+		cursor:pointer;
+		
+		&:hover {
+			background:$color-accent;
+			color:$color-default;
+		}
+		
+		&>svg {
+			width:100%;
+			height:100%;
+		}
+	}
+}
+
+
+@media all and (max-width: 980px) {
+	
+	.b-modal {
+		background:$color-default;
+		
+		&:before {
+			display:none;
+		}
+		
+		&-wrap {
+			display:block;
+			width:100%;
+			padding:0;
+		}
+		
+		&-con {
+			
+		}
+		
+		&-close {
+			top:1rem;
+			right:1rem;
+		}
+	}
+	
+}

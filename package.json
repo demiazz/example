@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "react": "^0.13.3",
+    "reflux": "^0.2.12",
+    "browserify": "^10.2.1",
+    "babelify": "^6.2.0",
+    "vinyl-source-stream": "^1.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-stylus": "^2.0.6",
+    "gulp-sourcemaps": "^1.5.2",
+    "autoprefixer-core": "^5.2.1",
+    "gulp-postcss": "^5.1.10"
+  }
+}

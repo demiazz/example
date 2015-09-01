@@ -1,1 +1,2 @@
-# example
+# test notification center
+# React, Reflux

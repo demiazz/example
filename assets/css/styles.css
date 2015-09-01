@@ -1,0 +1,82 @@
+HTML, BODY, DIV, SPAN, APPLET, OBJECT, IFRAME,
+H1, H2, H3, H4, H5, H6, P, BLOCKQUOTE, PRE,
+A, ABBR, ACRONYM, ADDRESS, BIG, CITE, CODE,
+DEL, DFN, EM, IMG, INS, KBD, Q, S, SAMP,
+SMALL, STRIKE, STRONG, SUB, SUP, TT, VAR,
+B, U, I, CENTER,
+DL, DT, DD, OL, UL, LI,
+FIELDSET, FORM, LABEL, LEGEND,
+TABLE, CAPTION, TBODY, TFOOT, THEAD, TR, TH, TD,
+ARTICLE, ASIDE, CANVAS, DETAILS, EMBED, 
+FIGURE, FIGCAPTION, FOOTER, HEADER, HGROUP, 
+MAIN, MENU, NAV, OUTPUT, RUBY, SECTION, SUMMARY,
+TIME, MARK, AUDIO, VIDEO {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+HTML {
+	width:100%;
+	height:100%;
+	font-family:'Open Sans',Arial,sans-serif;
+	background:#F3F3F3;
+}
+
+.header {
+	position:relative;
+	width:100%;
+	min-width:960px;
+	height:84px;
+	background:#FFF;
+	border-bottom:1px solid #D7D7D7;
+}
+
+.counter {
+	position:absolute;
+	top:18px;
+	left:50%;
+	margin-left:360px;
+
+	width:48px;
+	height:16px;
+	padding:16px 0;
+	border-radius:24px;
+	background:transparent;
+
+	cursor:pointer;
+
+	font-size:12px;
+	line-height:16px;
+	text-align:center;
+
+	transition:background .25s;
+}
+	.counter._active {
+		background:#FF494D;
+		color:#FFF;
+	}
+	.counter._history {
+		opacity:.5;
+	}
+	.counter:before {
+		content:'';
+		display:inline-block;
+		vertical-align:top;
+		width:17px;
+		height:17px;
+		margin-top:-1px;
+		background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%23AAA%22%20d%3D%22M15.51%2013.52c-1.53%200-2.82-2.52-2.82-5.51v-2.01c0-2.07-1.5-3.81-3.51-4.31.07-.15.1-.31.1-.48%200-.67-.58-1.21-1.28-1.21-.7%200-1.28.54-1.28%201.22%200%20.17.04.33.11.48-2.02.5-3.52%202.23-3.52%204.3v2.01c0%202.99-1.29%205.51-2.82%205.51-.27%200-.49.21-.49.47s.22.47.49.47h5.49c.23.88%201.03%201.54%202.02%201.54s1.79-.67%202.01-1.54h5.5c.27%200%20.49-.21.49-.47s-.22-.47-.49-.47zm-7.51-12.58c.16%200%20.29.13.29.28%200%20.31-.58.31-.58%200%200-.16.13-.28.29-.28zm0%2014.12c-.45%200-.83-.24-1.01-.6h2.02c-.19.35-.57.6-1.01.6zm1.62-1.54h-7.12c1.09-1.12%201.8-3.15%201.8-5.51v-2.01c0-1.95%201.66-3.53%203.7-3.53s3.7%201.58%203.7%203.53v2.01c0%202.36.71%204.39%201.8%205.51h-3.88z%22/%3E%3C/svg%3E');
+	}
+	.counter._active:before {
+		background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M15.51%2013.52c-1.53%200-2.82-2.52-2.82-5.51v-2.01c0-2.07-1.5-3.81-3.51-4.31.07-.15.1-.31.1-.48%200-.67-.58-1.21-1.28-1.21-.7%200-1.28.54-1.28%201.22%200%20.17.04.33.11.48-2.02.5-3.52%202.23-3.52%204.3v2.01c0%202.99-1.29%205.51-2.82%205.51-.27%200-.49.21-.49.47s.22.47.49.47h5.49c.23.88%201.03%201.54%202.02%201.54s1.79-.67%202.01-1.54h5.5c.27%200%20.49-.21.49-.47s-.22-.47-.49-.47zm-7.51-12.58c.16%200%20.29.13.29.28%200%20.31-.58.31-.58%200%200-.16.13-.28.29-.28zm0%2014.12c-.45%200-.83-.24-1.01-.6h2.02c-.19.35-.57.6-1.01.6zm1.62-1.54h-7.12c1.09-1.12%201.8-3.15%201.8-5.51v-2.01c0-1.95%201.66-3.53%203.7-3.53s3.7%201.58%203.7%203.53v2.01c0%202.36.71%204.39%201.8%205.51h-3.88z%22/%3E%3C/svg%3E');		
+	}
+	.counter>SPAN {
+		display:none;
+	}
+	.counter._active>SPAN {
+		display:inline-block;
+		vertical-align:top;
+	}

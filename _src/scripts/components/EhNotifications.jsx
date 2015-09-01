@@ -5,7 +5,8 @@ var EhNotificationsMessage = require('./EhNotificationsMessage.jsx');
 var EhNotifications = React.createClass({
 	
 	propTypes: {
-		onReadMessage: React.PropTypes.func, //callback whem message marks as read
+		onReadMessage: React.PropTypes.func, //callback when message marks as read
+		onNavigateToHistory: React.PropTypes.func, //callback when history button clicked
 		showHistory: React.PropTypes.bool, //toggle history view
 		historyLen: React.PropTypes.number //how many messages show in history
 	},
@@ -13,6 +14,7 @@ var EhNotifications = React.createClass({
 	getDefaultProps() {
 		return {
 			onReadMessage: null,
+			onNavigateToHistory: null,
 			showHistory: false,
 			historyLen: 5
 		};
